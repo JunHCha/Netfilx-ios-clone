@@ -26,6 +26,10 @@
 		BD7B6668283A5F75003CA378 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B6667283A5F75003CA378 /* APICaller.swift */; };
 		BD7B666A283A63B9003CA378 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B6669283A63B9003CA378 /* Title.swift */; };
 		BD7B666C283A662D003CA378 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B666B283A662D003CA378 /* Extensions.swift */; };
+		BDD63158284A289A0097E6F0 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD63157284A289A0097E6F0 /* SearchResultsViewController.swift */; };
+		BDD6315E284A39340097E6F0 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6315D284A39340097E6F0 /* YoutubeSearchResponse.swift */; };
+		BDD63160284B4EC10097E6F0 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6315F284B4EC10097E6F0 /* TitlePreviewViewController.swift */; };
+		BDD63162284B51040097E6F0 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD63161284B51040097E6F0 /* TitlePreviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,11 @@
 		BD7B6667283A5F75003CA378 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		BD7B6669283A63B9003CA378 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		BD7B666B283A662D003CA378 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BDD63157284A289A0097E6F0 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		BDD6315C284A305A0097E6F0 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		BDD6315D284A39340097E6F0 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
+		BDD6315F284B4EC10097E6F0 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
+		BDD63161284B51040097E6F0 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +134,10 @@
 				BD3388D3283A265700B48A98 /* Controllers */,
 				BD3388A3283A22C600B48A98 /* AppDelegate.swift */,
 				BD3388A5283A22C600B48A98 /* SceneDelegate.swift */,
-				BD3388A7283A22C600B48A98 /* MainTabBarViewController.swift */,
 				BD3388AC283A22C800B48A98 /* Assets.xcassets */,
 				BD3388AE283A22C800B48A98 /* LaunchScreen.storyboard */,
 				BD3388B1283A22C800B48A98 /* Info.plist */,
+				BDD6315C284A305A0097E6F0 /* Config.xcconfig */,
 			);
 			path = "Netflix Clone IOS";
 			sourceTree = "<group>";
@@ -136,10 +145,8 @@
 		BD3388D3283A265700B48A98 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD3388D4283A267900B48A98 /* HomeViewController.swift */,
-				BD3388D6283A268900B48A98 /* UpcomingViewController.swift */,
-				BD3388DA283A26AF00B48A98 /* DownloadsViewController.swift */,
-				BD3388D8283A269600B48A98 /* SearchViewController.swift */,
+				BDD6315A284A29310097E6F0 /* General */,
+				BDD63159284A291A0097E6F0 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				BD350788283FA64E00F80F89 /* TitleViewModel.swift */,
+				BDD63161284B51040097E6F0 /* TitlePreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -167,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				BD7B6669283A63B9003CA378 /* Title.swift */,
+				BDD6315D284A39340097E6F0 /* YoutubeSearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +194,27 @@
 				BD7B6667283A5F75003CA378 /* APICaller.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		BDD63159284A291A0097E6F0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BD3388D4283A267900B48A98 /* HomeViewController.swift */,
+				BD3388D6283A268900B48A98 /* UpcomingViewController.swift */,
+				BD3388D8283A269600B48A98 /* SearchViewController.swift */,
+				BD3388A7283A22C600B48A98 /* MainTabBarViewController.swift */,
+				BD3388DA283A26AF00B48A98 /* DownloadsViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BDD6315A284A29310097E6F0 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				BDD63157284A289A0097E6F0 /* SearchResultsViewController.swift */,
+				BDD6315F284B4EC10097E6F0 /* TitlePreviewViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,8 +363,12 @@
 				BD7B6666283A3F1A003CA378 /* HeroHeaderUIView.swift in Sources */,
 				BD3388DB283A26AF00B48A98 /* DownloadsViewController.swift in Sources */,
 				BD3388A4283A22C600B48A98 /* AppDelegate.swift in Sources */,
+				BDD63158284A289A0097E6F0 /* SearchResultsViewController.swift in Sources */,
 				BD7B666C283A662D003CA378 /* Extensions.swift in Sources */,
+				BDD6315E284A39340097E6F0 /* YoutubeSearchResponse.swift in Sources */,
 				BD3388A6283A22C600B48A98 /* SceneDelegate.swift in Sources */,
+				BDD63162284B51040097E6F0 /* TitlePreviewViewModel.swift in Sources */,
+				BDD63160284B4EC10097E6F0 /* TitlePreviewViewController.swift in Sources */,
 				BD3388D7283A268900B48A98 /* UpcomingViewController.swift in Sources */,
 				BD7B666A283A63B9003CA378 /* Title.swift in Sources */,
 				BD3388D5283A267900B48A98 /* HomeViewController.swift in Sources */,
@@ -385,6 +419,7 @@
 /* Begin XCBuildConfiguration section */
 		BD3388C8283A22C900B48A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD6315C284A305A0097E6F0 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
